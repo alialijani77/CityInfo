@@ -12,16 +12,19 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CityInfo.IoC", "CityInfo.IoC", "{C506091A-0DB5-43F6-92EF-F40D216ECB8C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CityInfo.API", "CityInfo.API", "{3CDBE5A4-959F-4DD6-859D-B9C99917CD00}"
+	ProjectSection(SolutionItems) = preProject
+		City.Info.Application\Services\Interfaces\ICityService.cs = City.Info.Application\Services\Interfaces\ICityService.cs
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "City.Info.Application", "City.Info.Application\City.Info.Application.csproj", "{041B32C9-FC32-4B84-BF45-5AAAB48ABD78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "City.Info.Application", "City.Info.Application\City.Info.Application.csproj", "{041B32C9-FC32-4B84-BF45-5AAAB48ABD78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.DataLayer", "CityInfo.DataLayer\CityInfo.DataLayer.csproj", "{174C4700-0AEF-42D3-BA06-B332B5F7F18F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityInfo.DataLayer", "CityInfo.DataLayer\CityInfo.DataLayer.csproj", "{174C4700-0AEF-42D3-BA06-B332B5F7F18F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.Domain", "CityInfo.Domain\CityInfo.Domain.csproj", "{D44CF589-1D09-4E4F-959D-479257E95693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityInfo.Domain", "CityInfo.Domain\CityInfo.Domain.csproj", "{D44CF589-1D09-4E4F-959D-479257E95693}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.IoC", "CityInfo.IoC\CityInfo.IoC.csproj", "{524CFFE2-FE32-413C-9CD2-54D8568739AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityInfo.IoC", "CityInfo.IoC\CityInfo.IoC.csproj", "{524CFFE2-FE32-413C-9CD2-54D8568739AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.API", "CityInfo.API\CityInfo.API.csproj", "{7A5073F5-4386-43D9-BFE2-3678BACD5293}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityInfo.API", "CityInfo.API\CityInfo.API.csproj", "{7A5073F5-4386-43D9-BFE2-3678BACD5293}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

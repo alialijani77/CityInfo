@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CityInfo.DataLayer\CityInfo.DataLayer.csproj" />
     <ProjectReference Include="..\CityInfo.IoC\CityInfo.IoC.csproj" />
   </ItemGroup>
