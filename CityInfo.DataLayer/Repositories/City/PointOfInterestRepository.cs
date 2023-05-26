@@ -17,7 +17,8 @@ namespace CityInfo.DataLayer.Repositories.City
 		public PointOfInterestRepository(CityInfoDbContext context)
 		{
 			_context = context;
-		}
+		}		
+
 		public async Task<PointOfInterest?> GetPointOfInterestForCity(int cityId, int pointOfInterestId)
 		{
 			return await _context.PointOfInterests.Where(p => p.CityId == cityId && p.Id == pointOfInterestId).FirstOrDefaultAsync();
@@ -27,6 +28,21 @@ namespace CityInfo.DataLayer.Repositories.City
 		public async Task<IEnumerable<PointOfInterest>> GetPointsOfInterestForCity(int cityId)
 		{
 			return await _context.PointOfInterests.Where(p => p.CityId == cityId).ToListAsync();
+		}
+
+		public async Task CreatePointOfInterestForCity(PointOfInterest pointOfInterest)
+		{
+			await _context.PointOfInterests.AddAsync(pointOfInterest);
+		}
+
+		public async Task SaveChange()
+		{
+			await _context.SaveChangesAsync();
+		}
+
+		public async Task UpdatePointOfInterestForCity(PointOfInterest pointOfInterest)
+		{
+			 _context.PointOfInterests.Update(pointOfInterest);
 		}
 	}
 }

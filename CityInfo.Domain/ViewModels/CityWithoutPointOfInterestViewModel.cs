@@ -1,5 +1,4 @@
-﻿using CityInfo.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,7 +8,7 @@ using System.Xml.Linq;
 
 namespace CityInfo.Domain.ViewModels
 {
-	public class CityViewModel
+	public class CityWithoutPointOfInterestViewModel
 	{
 		public int Id { get; set; }
 
@@ -19,7 +18,5 @@ namespace CityInfo.Domain.ViewModels
 
 		[Display(Name = "Description")]
 		public string? Description { get; set; }
-
-		public ICollection<PointOfInterestViewModel> PointOfInterests { get; set; }
 	}
 }

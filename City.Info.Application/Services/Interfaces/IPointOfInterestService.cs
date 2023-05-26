@@ -12,6 +12,11 @@ namespace City.Info.Application.Services.Interfaces
 	{
 		Task<IEnumerable<PointOfInterestViewModel>> GetPointsOfInterestForCity(int cityId);
 
-		Task<PointOfInterestViewModel?> GetPointOfInterestForCity(int cityId, int pointOfInterestId);
+		Task<PointOfInterest?> GetPointOfInterestForCity(int cityId, int pointOfInterestId);
+
+		Task<bool> CreatePointOfInterestForCity(CreatePointOfInterestForCityViewModel createPointOfInterestForCityViewModel);
+
+		Task<bool> UpdatePointOfInterestForCity(UpdatePointOfInterestForCityViewModel updatePointOfInterestForCityViewModel);
+
 	}
 }

@@ -21,8 +21,11 @@ namespace CityInfo.DataLayer.Context
 
 		public DbSet<PointOfInterest> PointOfInterests { get; set; }
 
+        public DbSet<User> Users { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public DbSet<UserCityInfo> UserCityInfos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<City>().HasData(
 				new City()
@@ -58,7 +61,21 @@ namespace CityInfo.DataLayer.Context
 					Description = "No Description"
 				}
 				);
+
+			modelBuilder.Entity<User>().HasData(
+				new User()
+				{
+					Id = 1,
+					FirstName = "ali",
+					LastName = "alie",
+					Email = "ali@gmail.com",
+					Password = "123",
+					PhoneNumber = "123",				
+
+				});
 			base.OnModelCreating(modelBuilder);
+
+
 		}
 
 	}

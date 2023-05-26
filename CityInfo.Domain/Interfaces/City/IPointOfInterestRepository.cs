@@ -12,5 +12,13 @@ namespace CityInfo.Domain.Interfaces.City
 		Task<IEnumerable<PointOfInterest>> GetPointsOfInterestForCity(int cityId);
 
 		Task<PointOfInterest?> GetPointOfInterestForCity(int cityId,int pointOfInterestId);
+
+		Task CreatePointOfInterestForCity(PointOfInterest pointOfInterest);
+
+		Task UpdatePointOfInterestForCity(PointOfInterest pointOfInterest);
+
+
+		Task SaveChange();
+
 	}
 }

@@ -23,6 +23,9 @@ namespace CityInfo.Domain.Entities
 
         public ICollection<PointOfInterest> PointOfInterests { get; set; }
 
-        #endregion
-    }
+		public ICollection<UserCityInfo> userCityInfos { get; set; }
+
+
+		#endregion
+	}
 }

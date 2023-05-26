@@ -20,17 +20,17 @@ namespace City.Info.Application.Services.Implementions.City
             _cityRepository = cityRepository;
 			_mapper = mapper;
         }
-        public async Task<IEnumerable<CityViewModel>> GetCitiesAsync()
+        public async Task<IEnumerable<CityWithoutPointOfInterestViewModel>> GetCitiesAsync()
 		{
 			var cities = await _cityRepository.GetCitiesAsync();
-			var result = _mapper.Map<IEnumerable<CityInfo.Domain.Entities.City>, IEnumerable<CityViewModel>>(cities);
+			var result = _mapper.Map<IEnumerable<CityInfo.Domain.Entities.City>, IEnumerable<CityWithoutPointOfInterestViewModel>>(cities);
 			return result;
 		}
 
 		public async Task<CityViewModel> GetCityAsync(int cityId, bool interestPointsOfInterest)
 		{
 			var city = await _cityRepository.GetCityAsync(cityId, interestPointsOfInterest);
-			var result = _mapper.Map<CityViewModel>(city);
+			var result = _mapper.Map<CityInfo.Domain.Entities.City, CityViewModel>(city);
 			return result;
 		}
 	}

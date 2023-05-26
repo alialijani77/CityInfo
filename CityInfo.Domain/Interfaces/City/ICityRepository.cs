@@ -13,5 +13,7 @@ namespace CityInfo.Domain.Interfaces.City
 
 		Task<CityInfo.Domain.Entities.City?> GetCityAsync(int cityId, bool interestPointsOfInterest);
 
+		Task<bool> CityExistsAsync(int cityId);
+
 	}
 }
